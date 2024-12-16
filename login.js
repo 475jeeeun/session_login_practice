@@ -41,11 +41,11 @@ function renderUserInfo(userInfo) {
 }
 
 // 유저 정보를 숨기는 함수
-function renderLoginForm() {
+function renderLoginForm(user) {
   main.style.display = "none";
   form.style.display = "block";
-  userName.textContent = "";
-  userDetail.textContent = "";
+  userName.textContent = user.user_name;
+  userDetail.textContent = user.user_info;
 }
 
 // 로그인 버튼을 클릭하는 경우 post 요청 보낸 후 get 요청
